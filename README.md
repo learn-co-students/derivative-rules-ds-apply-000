@@ -6,45 +6,45 @@
 * Understand the rules for taking the derivative of each term
 * Understand how to take the derivative of a function 
 
-### Introduction 
+### Review of Derivatives
 
-From previous lessons, you know that the derivative is the instantaneous rate of change of a function.  We said that the derivative of a function at a certain point is just the slope of the function at that point.  And to calculate that slope of the function at a given point, we make $\Delta x$ value smaller and smaller to approach a change of zero, and see what our $ \Delta f/\Delta x $ converges upon.
+From previous lessons, you know that the derivative is the instantaneous rate of change of a function.  We said that the derivative of a function at a certain point is just the slope of the function at that point.  And to calculate that slope of the function at a given point, we make $\Delta x$ value smaller until it approaches zero, and see what our $ \frac{\Delta f}{\Delta x} $ converges upon.
 
 For example, we saw the following table: 
 
-| $ \Delta x $        | $ \Delta f/\Delta x $|
+| $ \Delta x $        | $ \frac{\Delta y}{\Delta x} $|
 | ------------- |:-------------:|
-| .1      | -171,000      |
-| .01 | -179,100     |
-| .001 | -179,910      |
-| .0001 | -179,991      |
+| 1      | 5      |
+| .1      | 4.1|
+| .01 | 4.01     |
+| .001 | 4.001      |
 
 
 This convergance around one number is called the **limit **.  And we can describe what we see in the above table as the expression: 
 
 
- $$ f'(x) = \lim_{\Delta x\to0} \frac{\Delta f}{\Delta x} = -180,000  $$.
+ $$ f'(2) = \lim_{\Delta x\to0} \frac{\Delta f}{\Delta x} = 4  $$
 
-We read this as the limit of $\Delta f / \Delta x $ -- that is the number $\Delta f / \Delta x $ approaches -- as  $ \Delta x $ approaches zero is -180,000.  So, in general our definition of the derivative is:
+We read this as the limit of $\frac{\Delta f}{\Delta x} $ as  $ \Delta x $ approaches zero equals 4.  So, in general our definition of the derivative is:
 
 $$ f'(x) = \lim_{\Delta x\to0} \frac{\Delta f}{\Delta x}  = \lim_{h\to0} \frac{f(x + h) - f(x)}{h} $$
 
 ### Our rules for calculating the derivative
 
-So far, we have calculated the derivative by changing our delta as reflected in the table above, and seeing the convergance.  However, mathematicians have given us shortcuts to calculate the derivative, and that is what we'll learn about here.  
+In the previous lesson, we calculated the derivative by changing our delta to see the convergance around a number as reflected in the table above.  However, mathematicians have derived shortcuts to calculate the derivative.  And these shortcuts allow us not just to evaluate the derivative at a single point, as we have done previously, but across any value of $x$ of the function.  
 
 ##### The power rule
 
-The first rule for us to learn is the power rule.  The power rule states is expressed as the following.  Given the following:
+The first rule for us to learn is the power rule.  The power rule is expressed as the following.  Given the following:
 
 $$f(x) = x^r $$
 
-Then, the derivative, $f'(x)$ is: 
+Then, the derivative is: 
 $$ f'(x) = r*x^{r-1} $$
 
-This says that if a variable, $x$, is raised to a exponent $r$, then the derivative of that function is the exponent $r$ multiplied by the variable, with the variable raised to one minus the original exponent.  Let's start by trying this with our original function for calculating the derivative, $f(x) = 3*x $.
+This says that if a variable, $x$, is raised to a exponent $r$, then the derivative of that function is the exponent $r$ multiplied by the variable, with the variable raised to the original exponent minus one.  
 
-Remember that we originally calculated the derivative with our formula: 
+Let's see this by way of example, with the function, $f(x) = 3*x $.  Remember that we originally calculated the derivative with our formula: 
 
 $$ f'(x) = \lim_{h\to0} \frac{f(x + h) - f(x)}{h} $$
 
@@ -52,7 +52,7 @@ $$ f'(4) = \lim_{h\to0} \frac{f(4 + h) - f(4)}{h} = 3 $$
 
 $$ f'(8) = \lim_{h\to0} \frac{f(8 + h) - f(8)}{h} = 3 $$
 
-We saw that our rate of change of the function $f(x) = 3x $ was always 3.
+We saw that our rate of change of our linear function $f(x) = 3x $ was always 3.  Since the rate of change is constant for linear functions, the derivative was the same across all values of $x$.
 
 ![](./derivative-3x.png)
 
@@ -74,20 +74,19 @@ Great!  This is aligns with what our graph shows, as well as our calculation usi
 
 ### Another example
 
-Now, let's apply the power rule with another example to make sure that we have the hang of it. 
+Let's apply the power rule with another example to make sure that we understand it. 
 
 $$f(x) = x^2 $$
 
 $$f'(x) = 2*x^{2-1} = 2*x^1 = 2*x $$
 
-Think about what our calculation for $f'(x)$ is saying about our function.  It says, for our function $f(x) = x^2$, a small change in $x$ produces an increase in $f(x) $ equal to 2 times the $ x $ value.  Ok, now let's try to use our power rule to calculate $f'(x)$ at specific values of $x$.  
+Think about what our calculation for $f'(x)$ is saying about our function.  It says, for our function $f(x) = x^2$, a small change in $x$ produces an increase in $f(x) $ equal to 2 times the $ x $ value.  Or, in other words:
+$$ f'(x) = 2*x $$
 
-Our rule says that $ f'(x) = 2*x $, so when 
-
-$ x = 2$ then $f'(2) = 2*2 = 4 $
-
-
-And when $ x = 10 $, then $ f'(10) = 2*10 = 20$. 
+* So when $ x = 2$ then $f'(2) = 2*2 = 4 $
+* When $ x = 3 $, then $ f'(3) = 2*3 = 6$
+* When $ x = -1 $, then $ f'(-1) = 2*(-1) = -2$
+* And when $ x = 10 $, then $ f'(10) = 2*10 = 20$. 
 
 We won't prove the power rule here.  But hopefully you can see that it does seem to fit our graph of the function $f(x) = x^2$.  Let's take a look.
 
@@ -97,7 +96,7 @@ It seems reasonable that the slope of the line tangent to a curve is $2*x$.  So 
 
 ##### The constant factor rule
 
-Believe it or not, we've already made use of the constant factor rule.  The constant factor addresses how to take the derivative of a function multiplied by a constant. 
+After learning the power rule, the constant factor is a breeze.  The constant factor addresses how to take the derivative of a function multiplied by a constant. 
 
 So in the above example, we our function of $f(x) = 3*x$.  Now, the derivative of that function
 
@@ -107,75 +106,105 @@ Applying the power rule, we know that $ \frac{\Delta f}{\Delta x}x^1 = x^{1-1} =
 
 $$f'(x) = 3 * \frac{\Delta f}{\Delta x}x = 3*1 = 3$$
 
-In the general case, we can say, consider the function $a*f(x)$ where $a$ is a constant (that is, is a number and not a variable).  Then $$\frac{\Delta f}{\Delta x}(a*f(x)) = a * \frac{\Delta f}{\Delta x}*f(x) $$  
+In the general case, we can say, consider the function $a*f(x)$ where $a$ is a constant (that is, is a number and not a variable).  Then 
 
-Now, don't let the fancy equations above confuse you.  The rule simply says if a variable is multiplied by a constant (i.e. a number), then to take the derivative of that term, apply the power rule to the variable and multiply the variable by that same constant.
+$$\frac{\Delta f}{\Delta x}(a*f(x)) = a * \frac{\Delta f}{\Delta x}*f(x) $$  
+
+> Now, don't let the fancy equations above confuse you.  The rule simply says if a variable is multiplied by a constant (i.e. a number), then to take the derivative of that term, apply our familiar power rule to the variable and multiply the variable by that same constant.
 
 So given the function: 
 
 $$f(x) = 2x^2 $$
+
+
 $$f'(x) = 2*\frac{\Delta f}{\Delta x} x^{2} = 2*2*x^{2-1} = 4x^1 = 4x $$
 
 That's the constant factor rule in action.
 
 ##### The addition rule
 
-So far all of our functions have only had one term.  Remember that a term is a constant or variable that is separated by a plus or minus sign.  So the function, $f(x)$ below has three terms:
+So far, all of our functions consisted of only one term.  Remember that a term is a constant or variable that is separated by a plus or minus sign.  For example, the function $f(x)$ below has three terms:
     
 $ f(x) = 4x^3 - x^2 + 3x $
 
-Ok, so to take a derivative of a function that has multiple terms, simply take the derivative of each of the terms individually.  So for the function above, $ f'(x) = 12x^2 - 2x + 3  $.  Do you see what we did there, we simply applied our previous rules to each of the terms individually and continued to add or subtract the terms accordingly.
+To take a derivative of a function that has multiple terms, simply take the derivative of each of the terms individually.  So for the function above, 
 
-### The chain rule
+$$ f(x) = 4x^3 - x^2 + 3x $$
 
-Ok, now let's talk about the chain rule.  Imagine that we would like to take the derivative of the following function:
+$$ f'(x) = 12x^2 - 2x + 3  $$  
 
-$$f(x) = (3 + x^2 + 2x )^2 $$ 
+Do you see what we did there?  We simply applied our previous rules to each of the terms individually and continued to add or subtract the terms accordingly.
 
-Doing something like that can be pretting tricky right off the bat.  Lucky for us, we can use the chain rule.  The chain rule is essentially a trick that can be applied when our functions get complicated.  The first step is using functional composition to break our function down. Ok, let's do it.
+### Derivatives Drill
 
-$$g(x) = (3 + x^2 + 2x)$$
-$$f(g(x)) = g(x)^2$$
+Let's take the last few lines of this lesson to practice these derivative rules.
 
-So now note that $f(x) = f(g(x))$.  So our new question is to find the derivative of that latter function, $f'(g(x))$.  Sounds impossible, you say?
+$$f(x) = 3x^5$$
 
-The chain rule allows us to answer just this question.  Remember, taking a derivative means changing a variable $x$ a little, and seeing the change in the output.  The chain rule allows us to solve the problem of seeing the change in output when our function does not **directly** depend on that changing variable, but depends on **a function ** that depends on a variable.  
+$$g(x) = 10x$$
 
-So here $f(g(x) $ does not directly depend on $x$.  Instead it depends on the fucntion $g(x)$ which depends on $x$.  Ok, enough talk let's see the rule.
+$$ z(x) = 10 $$
 
- $f'(g(x)) = \frac{\Delta f}{\Delta g}f(g)*\frac{\Delta f}{\Delta x}g(x)$.  Yes it's a mouthful, but it's not so bad in practice.
+What are the derivatives of these respective functions?
 
-### Applying the chain rule
+> Take some time to think through it.  
 
-Let's apply our chain rule step by step to the function by taking the derivative $f'(x) $ where:
+> Even a pen and paper could be in order.
 
-$$g(x) = (3 + x^2 + 2x)$$
-$$f(g(x)) = g(x)^2$$
+> Ok, maybe the pen is too far away...Time for the answers.
 
-Remember our chain rule is: $f'(g(x)) = \frac{\Delta f}{\Delta g}f(g)*\frac{\Delta f}{\Delta x}g(x)$
+$$f(x) = 3x^5$$
+$$f'(x) = 15x^4$$
 
-* First we take the derivative $\frac{\Delta g}{\Delta x}g(x) = g'(x) = 2x + 2$.
-* Then, we take the derivative $\frac{\Delta f}{\Delta g}f(g(x))$ where $f(g(x)) = (g(x))^2 $.
+$$g(x) = 10x$$
+$$g'(x) = 10$$
 
-This is how we evaluate that second derivative.  $\frac{\Delta f}{\Delta g}f(g(x)) = 2 * (g(x))^1 =  2 * g(x)$ 
+$$ z(x) = 10  $$
+$$ z(x) = 10 * (x^0) $$
+$$ z'(x) = 0*10x^{0-1} = 0 $$
 
-The reason why is because to take that second derivative $\frac{\Delta f}{\Delta g}f(g(x))$, means how does the output of $f(g(x))$ change as we nudge **the function** $g(x)$.  This means that we can just treat the entire function $g(x)$ as a variable, and use our power rule.  
+So as you can see, we are just applying our rule: 
 
-Ok, now we have solved our two derivatives.  Let's plug these derivatives back into our chain rule of $f'(g(x)) = \frac{\Delta f}{\Delta g}f(g)*\frac{\Delta f}{\Delta x}g(x)$.
+$$f(x) = x^r $$ 
 
-Doing so we have $$f'(g(x)) = 2*g(x)*(2x + 2) = 2*(3 + x^2 + 2x)*(2x + 2) $$
+$$ f'(x) = r*x^{r-1} $$ 
 
-Leaving our equation there is fine.  We've done enough math for one lesson.  Hopefully, you see how using the chain rule allows us to break a complicated function up into two, and simply apply the rule to calculate the derivative.   
+And note that whenever we take the derivative of a constant like the number 10, then the derivative of that constant is 0.  
+
+#### Evaluating derivatives
+
+Let's evaluate $f'(x)$, $g'(x)$ and $z'(x)$, each at the value where $x = 3$.
+
+Are you able to deterimine what the derivatives of each of these functions each will equal when $x = 3$?  We simply substitute x for 3, whenever we see $x$.
+
+So:
+
+$$f'(3) = 15x^4 = 15*3^4 = 15*81 = 1215 $$
+
+$$g'(3) = 10 = 10 $$
+
+$$z'(3) = 0 = 0 $$
+
+#### Try again
+
+Let's try a couple more derivatives.
+
+$$f(x) = 3x^3 + 8x + 12$$
+
+$$g(x) = 12x^2 + 4x^2 + 2$$
+
+Ok, now for the derivatives. 
+
+ Let's see it!
+
+$$f(x) = 3x^3 + 8x + 12$$
+$$f'(x) = 9x^2 + 8 $$
+
+$$g(x) = 12x^2 + 4x^2 + 2$$
+$$g'(x) = 24x + 8x = 32x$$
 
 ### Summary
 
-In this section we saw a different way for calculating the derivative.  The derivative of a function at a given point is still the instantaneous rate of change of that function at that point. Now we have three rules that allow us to calculate our derivative.  The most tricky of these is the power rule, which says that if $f(x) = x^r$, then $ f'(x) = r * b^{r-1} $.
+In this section, we learned a different way for calculating the derivative.  The derivative of a function at a given point is still the instantaneous rate of change of that function at that point. Now we have three rules that allow us to calculate our derivative.  The most tricky of these is the power rule, which says that if $f(x) = x^r$, then $ f'(x) = r * x^{r-1} $.
 
-Using our derivative rules, we can now calculate the derivative across the entire function.  So the derivative of $f(x) = 3x $ is always 3, and the derivative of $f(x) = x^2 $ is $f(x) = 2x $.  Then to evaluate our derivative at a specific value of $x$ we simply plug that value of $x$ into our derivative, so when $f'(x) = 2x$, then $f'(2) = 2*2$.  
-
-Finally we saw how the chain rule allows us to break a complicated function up into two, and simply apply the rule of $f'(g(x)) = \frac{\Delta f}{\Delta g}f(g)*\frac{\Delta f}{\Delta x}g(x)$.
-
-
-```python
-
-```
+Using our derivative rules, we can now calculate the derivative across the entire function.  So the derivative of $f(x) = 3x $ is always 3, and the derivative of $f(x) = x^2 $ is $f(x) = 2x $.  To evaluate our derivative at a specific value of $x$, we simply plug that value of $x$ into our derivative.  When $f'(x) = 2x$, then $f'(2) = 2*2$.  
