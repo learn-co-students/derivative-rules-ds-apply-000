@@ -98,7 +98,7 @@ It seems reasonable that the slope of the line tangent to a curve is $2*x$.  So 
 
 After learning the power rule, the constant factor is a breeze.  The constant factor addresses how to take the derivative of a function multiplied by a constant. 
 
-So in the above example, we our function of $f(x) = 3*x$.  Now, the derivative of that function
+So in the above example, we have our function of $f(x) = 3*x$.  Now, the derivative of that function
 
 $$f'(x) = 3 * \frac{\Delta f}{\Delta x} $$
 
