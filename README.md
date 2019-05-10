@@ -3,8 +3,8 @@
 
 ### Learning Objectives
 
-* Understand the rules for taking the derivative of each term
-* Understand how to take the derivative of a function
+- Understand the rules for taking the derivative of each term
+- Understand how to take the derivative of a function
 
 ### Review of Derivatives
 
